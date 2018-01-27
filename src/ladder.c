@@ -76,6 +76,11 @@ PROTO(void Write_U_b_Y1(BOOL v);)
 
 STATIC SWORD U_i_T1 = 0;
 
+/* You provide these functions. */
+PROTO(BOOL Read_U_b_Y2(void);)
+PROTO(void Write_U_b_Y2(BOOL v);)
+
+
 
 /* Call this function once per PLC cycle. You are responsible for calling
    it at the interval that you specified in the MCU configuration when you
@@ -155,6 +160,18 @@ void PlcCycle(void)
     }
     
     Write_U_b_R0(Read_I_b_rung_top());
+    
+    /* ] finish series */
+    
+    /* start rung 4 */
+    Write_I_b_rung_top(Read_I_b_mcr());
+    
+    /* start series [ */
+    if(!Read_U_b_Y1()) {
+        Write_I_b_rung_top(0);
+    }
+    
+    Write_U_b_Y2(Read_I_b_rung_top());
     
     /* ] finish series */
 }

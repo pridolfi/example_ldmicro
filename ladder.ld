@@ -3,13 +3,14 @@ MICRO=ANSI C Code
 CYCLE=10000
 CRYSTAL=4000000
 BAUD=2400
-COMPILED=Z:\home\pablo\work\cnl\example_ldmicro\src\ladder.c
+COMPILED=Z:\home\pablo\work\cnl\example_ldmicro_mio\src\ladder.c
 
 IO LIST
     X0 at 0
     X1 at 0
     Y0 at 0
     Y1 at 0
+    Y2 at 0
 END
 
 PROGRAM
@@ -30,4 +31,8 @@ RUNG
     CONTACTS Y1 0
     TON T1 500000
     COIL R0 0 0 0
+END
+RUNG
+    CONTACTS Y1 0
+    COIL Y2 0 0 0
 END
