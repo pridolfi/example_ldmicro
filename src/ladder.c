@@ -77,8 +77,8 @@ PROTO(void Write_U_b_Y1(BOOL v);)
 STATIC SWORD U_i_T1 = 0;
 
 /* You provide these functions. */
-PROTO(BOOL Read_U_b_Y2(void);)
-PROTO(void Write_U_b_Y2(BOOL v);)
+PROTO(BOOL Read_U_b_Y7(void);)
+PROTO(void Write_U_b_Y7(BOOL v);)
 
 
 
@@ -171,7 +171,7 @@ void PlcCycle(void)
         Write_I_b_rung_top(0);
     }
     
-    Write_U_b_Y2(Read_I_b_rung_top());
+    Write_U_b_Y7(Read_I_b_rung_top());
     
     /* ] finish series */
 }

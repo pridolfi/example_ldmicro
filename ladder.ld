@@ -10,7 +10,7 @@ IO LIST
     X1 at 0
     Y0 at 0
     Y1 at 0
-    Y2 at 0
+    Y7 at 0
 END
 
 PROGRAM
@@ -34,5 +34,5 @@ RUNG
 END
 RUNG
     CONTACTS Y1 0
-    COIL Y2 0 0 0
+    COIL Y7 0 0 0
 END
