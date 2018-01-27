@@ -125,7 +125,7 @@ void PlcCycle(void)
     }
     
     if(Read_I_b_rung_top()) {
-        if(U_i_T0 < 99) {
+        if(U_i_T0 < 49) {
             U_i_T0++;
             Write_I_b_rung_top(0);
         }
@@ -146,7 +146,7 @@ void PlcCycle(void)
     }
     
     if(Read_I_b_rung_top()) {
-        if(U_i_T1 < 99) {
+        if(U_i_T1 < 49) {
             U_i_T1++;
             Write_I_b_rung_top(0);
         }
